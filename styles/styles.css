@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url(https://fonts.adobe.com/fonts/futura-pt);
+
+:root{
+	--mainTextColor-light: rgb(62, 40, 102);
+	--secondaryTextColor-light: #000;
+	--mainLinkColor-light: rgb(114, 95, 149);
+	--mainBorderColor-light: rgb(87, 72, 124);
+	--mainBgColor-light: rgb(248, 249, 255);
+	
+	/*--mainTextColor-dark: #fff;
+	--secondaryTextColor-dark: #adb0b1;
+	--mainLinkColor-dark: rgb(30, 190, 214);
+	--mainBorderColor-dark: #2b3031;
+	--mainBgColor-dark: #131415;*/
+	
+	--mainTextColor: var(--mainTextColor-light);
+	--secondaryTextColor: var(--secondaryTextColor-light);
+	--mainLinkColor: var(--mainLinkColor-light);
+	--mainBorderColor: var(--mainBorderColor-light);
+	--mainBgColor: var(--mainBgColor-light);
+}
+
+*{
+	font-family: "Futura";
+	line-height: 1.5em;
+	box-sizing: border-box;
+	color: var(--mainTextColor-light);
+}
+
+body{
+	background-color: var(--mainBgColor-light);
+}
+
+p, span, li{
+	color: var(--secondaryTextColor-light);
+}
+
+a{
+	text-decoration: none;
+	color:var(--mainLinkColor-light);
+	font-weight: 500;
+}
+
+li{
+	line-height: 1.5em;
+}
+
+#container--main{
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.section--page{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#wrapper--hero{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 45px;
+	text-align: center;
+	gap: 30px;
+}
+
+#bio{
+	font-weight: lighter;
+}
+
+#user-name{
+	font-weight: bolder;
+	font-size: 4.5em;
+	line-height: 1em;
+	font-variant-caps: all-small-caps;
+	text-shadow: 4px 2px 10px rgb(156, 156, 156);
+	
+}
+
+#profile-pic{
+	width: 200px;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 50%;
+	
+}
+
+#email{
+	color: var(--mainTextColor-light);
+	font-variant-caps: all-small-caps;
+	font-size: 150%;
+}
+
+#socials--list{
+	display: flex;
+	justify-content: space-between;
+	column-gap: 1em;
+	flax-wrap: wrap;
+}
+
+#socials--list a{
+	font-weight: 600;
+	color: var(--secondaryTextColor-light);
+	font-size: 0.9em;
+	transition: 0.3s;
+}
+
+#socials--list a:hover{
+	font-weight: 600;
+	color: var(--mainLinkColor-light);
+	font-size: 0.9em;
+}
+
+#skill--list{
+	list-style: none;
+}
+
+#wrapper--techstack__items{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	font-size: 0.9em;
+}
+
+.card--techstack{
+	border: 1px solid var(--mainBorderColor-light);
+	border-radius: 5px;
+	padding: 0.5em 1em;
+	align-items: center;
+}
+
+.card--work-history, .card--education, .skill--list{
+	border-left: 1px solid var(--mainBorderColor-light);
+	margin-top:3em;
+	margin-bottom: 3em;
+	padding-left: 2em; 
+}
+
+.line-break{
+	background-color: var(--mainBorderColor-light);
+	height: 1px;
+}
+
+
+
+@media(max-width:600px){
+	
+	.section--page{
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+	
+	#wrapper--hero{
+		gap: 1em;
+		flex-direction: column;
+	}
+	
+	/*#profile-pic{
+		width: 200px;
+		height: 300px;
+	}*/
+	
+	.card--work-history, .card--education{
+		border-left: none;
+		padding-left: 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
